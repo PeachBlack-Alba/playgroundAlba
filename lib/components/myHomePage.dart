@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:playGroundAlba/components/myBottomNavbar.dart';
 import '../components/text_section.dart';
 
 class MyHomePage extends StatefulWidget {
@@ -69,6 +70,7 @@ class _MyHomePage extends State<MyHomePage> {
           // TextSection("title2", "something2"),
         ],
       ),
+      bottomNavigationBar: MyBottomNavBar(),
     );
   }
 }

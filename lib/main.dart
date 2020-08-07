@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import './styles/appTheme_1.dart';
 import './components/myHomePage.dart';
+import './components/myOtherPage.dart';
 
 void main() {
   runApp(MyPlayground());
@@ -14,7 +15,13 @@ class MyPlayground extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       // theme: appTheme(),
       theme: appTheme1(),
-      home: MyHomePage(),
+      // comment the home because we specify the route bellow
+      // home: MyHomePage(),
+      initialRoute: "/",
+      routes: {
+        "/": (context) => MyHomePage(),
+        "/other": (context) => MyOtherPage()
+      },
     );
   }
 }
