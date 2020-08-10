@@ -14,36 +14,46 @@ class TextSection extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Column(
-      mainAxisAlignment: MainAxisAlignment.start,
-      crossAxisAlignment: CrossAxisAlignment.stretch,
-      children: [
-        Container(
-          padding: const EdgeInsets.fromLTRB(_hPad, 32.0, _hPad, 4),
-          child: Text(_title),
-          width: appWidth / 2,
-          height: middleSectionHeight,
-          decoration: BoxDecoration(
-            borderRadius: BorderRadius.only(
-              bottomRight: Radius.circular(70.0),
+    return Container(
+      child: Column(
+        mainAxisAlignment: MainAxisAlignment.start,
+        crossAxisAlignment: CrossAxisAlignment.stretch,
+        children: [
+          Container(
+            // padding: const EdgeInsets.fromLTRB(_hPad, 32.0, _hPad, 4),
+            padding: EdgeInsets.all(10.0),
+            child: Text(_title),
+            width: appWidth / 2,
+            height: middleSectionHeight,
+            decoration: BoxDecoration(
+              borderRadius: BorderRadius.only(
+                bottomRight: Radius.circular(70.0),
+                bottomLeft: Radius.circular(70.0),
+                topLeft: Radius.circular(70.0),
+                topRight: Radius.circular(70.0),
+              ),
+              color: Color(0xffA4B0BD),
             ),
-            color: Color(0xffA4B0BD),
           ),
-        ),
-        Container(
-          padding: const EdgeInsets.fromLTRB(_hPad, 10.0, _hPad, _hPad),
-          child: Text(_body),
-          width: appWidth / 2,
-          height: middleSectionHeight,
-          decoration: BoxDecoration(
-            borderRadius: BorderRadius.only(
-              bottomRight: Radius.circular(70.0),
-              topLeft: Radius.circular(70.0),
+          Container(
+            // padding: const EdgeInsets.fromLTRB(_hPad, 10.0, _hPad, _hPad),
+            padding: EdgeInsets.all(10.0),
+
+            child: Text(_body),
+            width: appWidth / 2,
+            height: middleSectionHeight,
+            decoration: BoxDecoration(
+              borderRadius: BorderRadius.only(
+                bottomRight: Radius.circular(70.0),
+                bottomLeft: Radius.circular(70.0),
+                topLeft: Radius.circular(70.0),
+                topRight: Radius.circular(70.0),
+              ),
+              color: Color(0xff99AAAB),
             ),
-            color: Color(0xff99AAAB),
           ),
-        ),
-      ],
+        ],
+      ),
     );
   }
 }

@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import './styles/appTheme_1.dart';
 import './components/myHomePage.dart';
 import './components/myOtherPage.dart';
+import 'components/myForm.dart';
 
 void main() {
   runApp(MyPlayground());
@@ -20,7 +21,8 @@ class MyPlayground extends StatelessWidget {
       initialRoute: "/",
       routes: {
         "/": (context) => MyHomePage(),
-        "/other": (context) => MyOtherPage()
+        "/other": (context) => MyOtherPage(),
+        "/myForm": (context) => MyForm()
       },
     );
   }
